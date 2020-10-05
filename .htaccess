@@ -1,0 +1,5 @@
+RewriteEngine on
+
+RewriteRule  ^courses/(.+)/?$ courses-single.php?name=$1     
+RewriteRule  ^courses/?$ courses.php     
+
