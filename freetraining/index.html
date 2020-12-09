@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <title>Solar training center in lagos, other part of Nigeria.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Lilovat solar Technology is a Nigeria based solar energy provider, We provide energy solution to people all over west Africa.<br>
+                            Our range of services includes Solar training in Lagos, and other par of Nigeria, solar energy installation, Inverter installation, inverter repairs, Renewable energy consultancy, Sales of Inverter, Solar equipments and support services.">
+
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+
+
+
+    <!-- CSS 
+    ================================================== -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/night-mode.css">
+    <link rel="stylesheet" href="assets/css/framework.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css"> 
+
+    <!-- icons
+    ================================================== -->
+    <link rel="stylesheet" href="assets/css/icons.css">
+
+ 
+</head>
+
+
+<body class="course-watch-page">
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+
+            <div class="course-layouts">
+
+                <div class="course-content bg-dark">
+
+                    <div class="course-header">
+                        
+                        <a href="#" class="nav-link" uk-toggle="target: .course-layouts; cls: course-sidebar-collapse">
+                            <i class="fas fa-bars"></i>
+                        </a>
+
+                        <h4 class="text-white"> Lilovat solar Technology </h4>
+
+                    </div>
+
+                    <div class="course-content-inner">
+
+                        <ul id="video-slider" class="uk-switcher">
+
+
+                            <li>
+                                <!-- to autoplay video uk-video="automute: true" -->
+                                <div class="video-responsive">
+                                    <iframe src="https://www.youtube.com/embed/eU7i2yT-EGo" frameborder="0"
+                                        uk-video="automute: true" allowfullscreen uk-responsive></iframe>
+                                </div>
+
+                            </li>
+                            <li>
+                                <div class="video-responsive">
+                                    <iframe src="https://www.youtube.com/embed/YcApt9RgiT0" frameborder="0"
+                                        allowfullscreen></iframe>
+                                </div>
+
+                            </li>
+                            <li>
+                                <div class="video-responsive">
+                                    <iframe src="https://www.youtube.com/embed/CGSdK7FI9MY" frameborder="0"
+                                        allowfullscreen uk-responsive></iframe>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="video-responsive">
+                                    <iframe src="https://www.youtube.com/embed/4I1WgJz_lmA" frameborder="0"
+                                        allowfullscreen uk-responsive></iframe>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="video-responsive">
+                                    <iframe src="https://www.youtube.com/embed/dDn9uw7N9Xg" frameborder="0"
+                                        allowfullscreen uk-responsive></iframe>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="video-responsive">
+                                    <iframe src="https://www.youtube.com/embed/CPcS4HtrUEU" frameborder="0"
+                                        allowfullscreen uk-responsive></iframe>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <!-- course sidebar -->
+
+                <div class="course-sidebar">
+                    <div class="course-sidebar-title">
+                        <h3> Table of Contents </h3>
+                    </div>
+                    <div class="course-sidebar-container" data-simplebar>
+
+                        <ul class="course-video-list-section" uk-accordion>
+
+                            <li class="uk-open">
+                                <div class="uk-accordion-content">
+                                    <!-- course-video-list -->
+                                    <ul class="course-video-list highlight-watched"
+                                        uk-switcher=" connect: #video-slider  ; animation: uk-animation-slide-right-small, uk-animation-slide-left-medium">
+                                        <li class=""> <a href="#"> Solar Energy Online Course Welcome! <span> 1min 47sec </span> </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+        <script>
+            (function (window, document, undefined) {
+                'use strict';
+                if (!('localStorage' in window)) return;
+                var nightMode = localStorage.getItem('gmtNightMode');
+                if (nightMode) {
+                    document.documentElement.className += ' night-mode';
+                }
+            })(window, document);
+
+
+            (function (window, document, undefined) {
+
+                'use strict';
+
+                // Feature test
+                if (!('localStorage' in window)) return;
+
+                // Get our newly insert toggle
+                var nightMode = document.querySelector('#night-mode');
+                if (!nightMode) return;
+
+                // When clicked, toggle night mode on or off
+                nightMode.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    document.documentElement.classList.toggle('night-mode');
+                    if (document.documentElement.classList.contains('night-mode')) {
+                        localStorage.setItem('gmtNightMode', true);
+                        return;
+                    }
+                    localStorage.removeItem('gmtNightMode');
+                }, false);
+
+            })(window, document);
+        </script>
+
+        <script src="code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script>
+            function make_button_active(tab) {
+                //Get item siblings
+                var siblings = tab.siblings();
+
+                /* Remove active class on all buttons
+                siblings.each(function(){
+                    $(this).removeClass('active');
+                }) */
+
+                //Add the clicked button class
+                tab.addClass('watched');
+            }
+
+            //Attach events to highlight-watched
+            $(document).ready(function () {
+
+                if (localStorage) {
+                    var ind = localStorage['tab']
+                    make_button_active($('.highlight-watched li').eq(ind));
+                }
+
+                $(".highlight-watched li").click(function () {
+                    if (localStorage) {
+                        localStorage['tab'] = $(this).index();
+                    }
+                    make_button_active($(this));
+                });
+
+            });
+        </script>
+
+    <!-- javaScripts
+    ================================================== -->
+    <script src="assets/js/framework.js"></script>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/simplebar.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/bootstrap-select.min.js"></script>
+
+
+</body>
+
+</html>
