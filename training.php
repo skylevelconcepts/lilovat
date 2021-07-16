@@ -83,7 +83,9 @@ include 'footer.php';
 
                             var delay = 1000;
                             $('#ent').html('<div class="alert alert-success alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><h7><i class="icon fa fa-check"></i> You have successfully registered<br></h7></div>');
-
+                            setTimeout((function() {
+                                window.location = "index.php";
+                            }), delay);
 
                         } else {
                             // alert(response);
