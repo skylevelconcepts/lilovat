@@ -4,7 +4,7 @@ $server='localhost';
 // $pass='';
 // $database='lilovat';
 $user='lilovat5';
-$pass=':m9Jx+pLSN46f9';
+$pass='g@TjV$z=w0$3';
 $database='lilovat5_lilovat';
 $conn = new mysqli($server, $user, $pass, $database);
 date_default_timezone_set('Africa/Lagos');
