@@ -173,6 +173,12 @@ $userid = $_SESSION["userid"] ;
                                     </li>
                                     <li class="nav-item">
                                         <a <?php
+                                           if($current_page=='training.php')
+                                           echo 'class="active"';
+                                           ?> href="training.php">Training</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a <?php
                                            if($current_page=='contact.php')
                                            echo 'class="active"';
                                            ?> href="contact.php">Contact</a>
