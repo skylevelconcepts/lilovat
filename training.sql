@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS `training` (
   
   `email` text NOT NULL,
     `phone` text NOT NULL,
+    `location` text NOT NULL,
        
    
  
