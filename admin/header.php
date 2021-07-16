@@ -19,7 +19,9 @@ if(isset($_SESSION['loginas'])){
         
     if($_SESSION['loginas']==$row['id']){}else{
     echo '<script>window.location="login.php";</script>';
-    }}   }else{echo '<script>window.location="login.php";</script>';}
+    }}   }else{
+      
+    }
     
                     
                     
@@ -193,9 +195,14 @@ if(isset($_GET['logout'])){
                   <i class="fa fa-certificate nav-icon"></i>
                   <p>Enrolls
                      <span class="badge badge-info right"><?php
-                    $sql ="select * from enrolled";
+                    $sql ="select * from training";
                     $qry=$conn->query($sql);
+                    if($qry->num_rows!=0){
                     echo $qry->num_rows;
+                  }else{
+echo 0;
+                    }
+
                     ?></span></p>
                 </a>
               </li>
